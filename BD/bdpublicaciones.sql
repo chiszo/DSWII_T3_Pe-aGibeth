@@ -238,7 +238,7 @@ CREATE TABLE usuario (
 	password varchar(300) NULL,
 	nombres varchar(100) NULL,
 	apellidos varchar(100) NULL,
-	activo BOOL NULL,
+	activo TINYINT(1) NULL,
 	CONSTRAINT users_pk PRIMARY KEY (idusuario)
 );
 

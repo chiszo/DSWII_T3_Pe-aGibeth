@@ -16,14 +16,13 @@ public class FileService implements IFileService{
     private void validarExtension(String filename) throws Exception {
         String extension = filename.substring(filename.lastIndexOf('.') + 1).toLowerCase();
         if (!extension.equals("docx")) {
-            throw new Exception("Extensión de archivo inválida. Se esperaba un archivo .doc.");
+            throw new Exception("Extensión de archivo invalida: " + extension);
         }
     }
 
     private void validarTamanoArchivo(MultipartFile archivo) throws Exception {
-        long maxSizeBytes = 2 * 1024 * 1024;
-        if (archivo.getSize() > maxSizeBytes) {
-            throw new Exception("El archivo ha excedido el tamaño máximo de 2MB.");
+        if (archivo.getSize() > 2 * 1024 * 1024) {
+            throw new Exception("El archivo a excedido 2MB");
         }
     }
 
