@@ -18,7 +18,7 @@ public class T3Application {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("api/v1/**")
+				registry.addMapping("api/t3/**")
 						.allowedMethods("GET","POST","PUT")
 						.allowedOrigins("https://www.cibertec.edu.pe");
 			}

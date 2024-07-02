@@ -16,8 +16,8 @@ public class Alumno {
     private String idalumno;
     private String apealumno;
     private String nomalumno;
-    private String idesp;
-    private Character proce;
+    private String proce;
+
     @ManyToOne
     @JoinColumn(name = "idesp")
     private Especialidad especialidad;
