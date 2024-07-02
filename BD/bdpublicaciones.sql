@@ -1,5 +1,6 @@
 create database bdpublicaciones;
 use bdpublicaciones;
+
 CREATE TABLE Especialidad (
 IdEsp CHAR(3) NOT NULL PRIMARY KEY,
 NomEsp VARCHAR(30) NOT NULL,
@@ -27,7 +28,8 @@ Ciclo CHAR(6) NOT NULL,
 Ncuota INT NOT NULL,
 Monto NUMERIC(12,2) NOT NULL,
 Fecha DATETIME,
-PRIMARY KEY(IdAlumno, Ciclo, Ncuota)
+PRIMARY KEY(IdAlumno, Ciclo, Ncuota),
+FOREIGN KEY (IdAlumno) REFERENCES Alumno(IdAlumno)
 );
 
 CREATE TABLE Notas (
@@ -35,7 +37,9 @@ IdAlumno CHAR(5) NOT NULL,
 IdCurso CHAR(4) NOT NULL,
 ExaParcial REAL NULL,
 ExaFinal REAL NULL,
-PRIMARY KEY(IdAlumno,IdCurso)
+PRIMARY KEY(IdAlumno,IdCurso),
+FOREIGN KEY (IdCurso) REFERENCES Curso(IdCurso),
+FOREIGN KEY (IdAlumno) REFERENCES Alumno(IdAlumno)
 );
 
 -- Agregar Datos a la Tabla Especialidad
