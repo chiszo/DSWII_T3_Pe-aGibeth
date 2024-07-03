@@ -257,14 +257,14 @@ CREATE TABLE usuario_rol (
 	CONSTRAINT user_role_FK FOREIGN KEY (idusuario) REFERENCES usuario(idusuario),
 	CONSTRAINT user_role_FK_1 FOREIGN KEY (idrol) REFERENCES rol(idrol)
 );
-
+--contraseña: 123456
 INSERT INTO usuario (nomusuario, email, password, nombres, apellidos, activo)
 VALUES 
-('usuario1', 'usuario1@example.com', 'password1', 'Nombre1', 'Apellido1', TRUE),
-('usuario2', 'usuario2@example.com', 'password2', 'Nombre2', 'Apellido2', TRUE),
-('usuario3', 'usuario3@example.com', 'password3', 'Nombre3', 'Apellido3', FALSE),
-('usuario4', 'usuario4@example.com', 'password4', 'Nombre4', 'Apellido4', TRUE),
-('usuario5', 'usuario5@example.com', 'password5', 'Nombre5', 'Apellido5', FALSE);
+('user', 'usuario1@example.com', '$2a$12$ceQFMJYvMulhpmbA6tyE1.AZKWUl.1ZtNhTujkUMKk9qZCCx4mMFa', 'Nombre1', 'Apellido1', TRUE),
+('chiszo', 'usuario2@example.com', '$2a$12$ceQFMJYvMulhpmbA6tyE1.AZKWUl.1ZtNhTujkUMKk9qZCCx4mMFa', 'Nombre2', 'Apellido2', TRUE),
+('polvora', 'usuario3@example.com', '$2a$12$ceQFMJYvMulhpmbA6tyE1.AZKWUl.1ZtNhTujkUMKk9qZCCx4mMFa', 'Nombre3', 'Apellido3', FALSE),
+('arimdan', 'usuario4@example.com', '$2a$12$ceQFMJYvMulhpmbA6tyE1.AZKWUl.1ZtNhTujkUMKk9qZCCx4mMFa', 'Nombre4', 'Apellido4', TRUE),
+('gumy', 'usuario5@example.com', '$2a$12$ceQFMJYvMulhpmbA6tyE1.AZKWUl.1ZtNhTujkUMKk9qZCCx4mMFa', 'Nombre5', 'Apellido5', FALSE);
 
 INSERT INTO rol (nomrol)
 VALUES 
