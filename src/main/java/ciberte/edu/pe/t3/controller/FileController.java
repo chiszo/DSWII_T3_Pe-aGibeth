@@ -17,7 +17,7 @@ import java.util.List;
 @PreAuthorize("hasRole('administrador')")
 @AllArgsConstructor
 @RestController
-@RequestMapping("api/t3/files")
+@RequestMapping(path = "api/t3/files")
 public class FileController {
 
     private final FileService fileService;

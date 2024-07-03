@@ -26,4 +26,5 @@ public class Notas {
     @JoinColumn(name = "idcurso")
     @JsonBackReference
     private Curso curso;
+
 }
